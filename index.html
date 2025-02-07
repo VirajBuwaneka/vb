@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar -->
+    <nav class="p-5 bg-gray-800 shadow-lg fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <h1 class="text-2xl font-bold text-white">Portfolio</h1>
+
+            <!-- Hamburger Icon (Visible on small screens) -->
+            <button id="menu-btn" class="text-white text-2xl md:hidden focus:outline-none transition-all duration-300">
+                <div class="block w-6 h-1 bg-white mb-2 transition-all duration-300" id="hamburger-line1"></div>
+                <div class="block w-6 h-1 bg-white mb-2 transition-all duration-300" id="hamburger-line2"></div>
+                <div class="block w-6 h-1 bg-white mb-2 transition-all duration-300" id="hamburger-line3"></div>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul id="menu" class="hidden md:flex space-x-4 text-white">
+                <li><a href="#home" class="hover:text-gray-400">Home</a></li>
+                <li><a href="#about" class="hover:text-gray-400">About Me</a></li>
+                <li><a href="#articles" class="hover:text-gray-400">Articles</a></li>
+                <li><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+                <li><a href="#tech-stack" class="hover:text-gray-400">Technology Stack</a></li>
+                <li><a href="#contact" class="hover:text-gray-400">Contact Me</a></li>
+            </ul>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu"
+            class="hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 text-white flex flex-col items-center justify-center space-y-6 transform translate-x-full transition-all duration-500">
+            <!-- Close Icon -->
+            <button id="close-menu" class="absolute top-5 right-5 text-3xl text-white focus:outline-none">
+                ✖
+            </button>
+
+            <a href="#home" class="p-2 text-xl hover:text-gray-400">Home</a>
+            <a href="#about" class="p-2 text-xl hover:text-gray-400">About Me</a>
+            <a href="#articles" class="p-2 text-xl hover:text-gray-400">Articles</a>
+            <a href="#projects" class="p-2 text-xl hover:text-gray-400">Projects</a>
+            <a href="#tech-stack" class="p-2 text-xl hover:text-gray-400">Technology Stack</a>
+            <a href="#contact" class="p-2 text-xl hover:text-gray-400">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- JavaScript for toggling menu and smooth scroll -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerLine1 = document.getElementById('hamburger-line1');
+        const hamburgerLine2 = document.getElementById('hamburger-line2');
+        const hamburgerLine3 = document.getElementById('hamburger-line3');
+
+        const navLinks = document.querySelectorAll('a[href^="#"]');
+
+        // Open and close mobile menu
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('translate-x-full');
+            mobileMenu.classList.toggle('translate-x-0');
+
+            // Hamburger to X animation
+            hamburgerLine1.classList.toggle('rotate-45');
+            hamburgerLine2.classList.toggle('opacity-0');
+            hamburgerLine3.classList.toggle('-rotate-45');
+        });
+
+        closeMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+
+            // Reset Hamburger to Menu icon
+            hamburgerLine1.classList.remove('rotate-45');
+            hamburgerLine2.classList.remove('opacity-0');
+            hamburgerLine3.classList.remove('-rotate-45');
+        });
+
+        // Close mobile menu when a navigation link is clicked and smooth scroll
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Close menu
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('translate-x-0');
+                mobileMenu.classList.add('translate-x-full');
+
+                // Reset Hamburger to Menu icon
+                hamburgerLine1.classList.remove('rotate-45');
+                hamburgerLine2.classList.remove('opacity-0');
+                hamburgerLine3.classList.remove('-rotate-45');
+
+                // Smooth scrolling to section
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="h-screen flex flex-col justify-center items-center text-center bg-cover bg-center relative pt-20"
+        style="background-image: url('photos/17931368.jpg');">
+
+        <!-- Full-Page Background with Content (no rounded corners) -->
+        <div
+            class="absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center bg-white bg-opacity-0 shadow-2xl px-10 py-14">
+
+            <div class="container px-4 sm:px-6 md:px-12 mx-auto flex flex-col md:flex-row items-center overflow-hidden">
+
+                <!-- Text Content Section -->
+                <div class="text-content text-center md:text-left mb-8 md:mb-0">
+                    <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#001f3d] font-sans">
+                        Hello Guys!
+                    </h2>
+
+                    <p class="mt-4 text-sm sm:text-base md:text-lg text-[#001f3d] font-sans">
+                        I'm <span class="font-semibold">Viraj Buwaneka</span>, showcasing my work and projects.
+                        I am passionate about <span class="font-semibold">Machine Learning</span> and
+                        <span class="font-semibold">Cloud Technologies</span>.
+                    </p>
+                </div>
+
+                <!-- Image Section without the Whitish Background -->
+                <div class="image-container mt-6 md:mt-0 md:ml-12 flex justify-center">
+                    <div
+                        class="relative w-full max-w-xs sm:max-w-sm md:max-w-sm lg:max-w-md xl:max-w-lg rounded-lg shadow-lg overflow-hidden">
+                        <img src="photos/22.jpeg" alt="Professional Image"
+                            class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- About Me Section -->
+    <section id="about" class="py-16 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">About Me</h2>
+            <p class="max-w-2xl mx-auto text-gray-300">
+                I'm a third-year undergraduate pursuing a BSc (Hons) in Financial Mathematics & Industrial Statistics at
+                the University of Ruhuna. Passionate about data, machine learning, and cloud technologies, I
+                continuously explore ways to transform data into meaningful insights for impactful decision-making.
+            </p>
+            <p class="max-w-2xl mx-auto text-gray-300 mt-4">
+                Always eager to learn and grow, I embrace new challenges that enhance my analytical and problem-solving
+                skills. Let's connect and explore opportunities together!
+            </p>
+
+            <!-- Education Section -->
+            <div class="mt-12 border-2 border-gray-500 rounded-lg p-6">
+                <h2 class="text-3xl font-bold text-white mb-6">Education</h2>
+
+                <!-- Degree Information -->
+                <div class="mt-6">
+                    <h3 class="text-2xl font-semibold text-white">BSc (Hons) Financial Mathematics and Industrial
+                        Statistics</h3>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">University of Ruhuna | Matara</p>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">Department of Mathematics, Faculty of Science</p>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2 font-bold">2022 - 2026</p>
+                </div>
+
+                <!-- A/L Results -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold text-white">GCE Advanced Level</h3>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">Kegalu Vidyalaya | Kegalle</p>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">Chemistry: A, Combined Mathematics: B, Physics: C
+                    </p>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2 font-bold">2017 - 2019</p>
+                </div>
+
+                <!-- O/L Results -->
+                <div class="mt-8">
+                    <h3 class="text-2xl font-semibold text-white">GCE Ordinary Level</h3>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">Kegalu Vidyalaya | Kegalle</p>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">9A's Passes</p>
+                    <p class="max-w-2xl mx-auto text-gray-300 mt-2 font-bold">2016</p>
+                </div>
+            </div>
+
+            <!-- Certificates Section -->
+            <div class="mt-12 border-2 border-gray-500 rounded-lg p-6">
+                <h2 class="text-3xl font-bold text-white mb-6">Certificates</h2>
+
+                <!-- AZ-900 Certification -->
+                <div class="mt-6">
+                    <h3 class="text-2xl font-semibold text-white">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+                    <a href="https://learn.microsoft.com/en-us/users/virajpathirana-5880/credentials/1fcbb4ea86049cea"
+                        target="_blank">
+                        <img src="photos/AZ.png" alt="AZ-900 Badge"
+                            class="mx-auto mt-4 w-32 h-32 transition-transform duration-300 hover:scale-110 cursor-pointer">
+                    </a>
+                </div>
+
+
+                <!-- Power Apps Certification -->
+                <div class="mt-6">
+                    <h3 class="text-2xl font-semibold text-white">Microsoft Power Apps Digital Badge (Including Power
+                        Automate)</h3>
+                </div>
+
+                <!-- Fabric Certification -->
+                <div class="mt-6">
+                    <h3 class="text-2xl font-semibold text-white">Microsoft Fabric Course Completion (Udemy)</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-- Add the following styles for responsiveness -->
+    <style>
+        /* Ensure hero and about sections are separate on smaller screens */
+        @media (max-width: 768px) {
+            #home {
+                flex-direction: column !important;
+                /* Stack items vertically on smaller screens */
+            }
+
+            .text-content {
+                text-align: center;
+                /* Center the text on small screens */
+            }
+
+            .image-container {
+                margin-top: 2rem;
+                width: 100%;
+                /* Make image take full width on smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-content h2 {
+                font-size: 2xl;
+            }
+        }
+    </style>
+
+
+    <!-- Articles Section -->
+    <section id="articles" class="py-16 px-6 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Articles</h2>
+            <p class="max-w-2xl mx-auto text-gray-300">Here are some articles I've written on technology, programming,
+                and industry trends.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-4">Machine Learning</h3>
+                    <img src="photos\1.jpg" alt="Article 1" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-300">Brief description of the article.</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-4">Scikit-Learn Pipelines</h3>
+                    <img src="photos\2.png" alt="Article 2" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-300">Scikit-learn Pipelines streamline machine learning workflows by chaining
+                        preprocessing steps and models into a single object. They ensure seamless data transformation,
+                        feature selection, and model training while preventing data leakage. Pipelines improve code
+                        efficiency, reproducibility, and scalability, making them essential for structured machine
+                        learning development in Python.</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-4">Azure storage Accounts</h3>
+                    <img src="photos\3.jpg" alt="Article 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-300">Azure Storage Accounts provide scalable, secure, and highly available cloud
+                        storage for data. They support multiple storage types, including Blob, File, Queue, Table, and
+                        Disk storage, catering to diverse workloads. With features like redundancy, access control, and
+                        integration with Azure services, they ensure reliable data management for applications and
+                        analytics.</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-4">Article 3</h3>
+                    <img src="photos\4.jpeg" alt="Article 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-300">Brief description of the article.</p>
+                </div>
+                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
+                    <h3 class="text-xl font-semibold mb-4">Using Microsoft Fabric for Kaggle</h3>
+                    <img src="photos\5.jpeg" alt="Article 3" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-300">Microsoft Fabric enhances Kaggle projects by providing a unified analytics
+                        platform with integrated compute, storage, and AI capabilities. It allows seamless data
+                        ingestion, transformation, and model training using lakehouses, notebooks, and pipelines. With
+                        built-in scalability and security, Fabric simplifies end-to-end machine learning workflows for
+                        efficient data analysis and experimentation.</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 bg-gray-700">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-white">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Project 1: Housing Price Prediction -->
+                <div
+                    class="border-2 border-gray-500 p-6 rounded-lg shadow-lg hover:bg-gray-500 hover:scale-105 transition-transform duration-300">
+                    <img src="photos/housing.jpg" alt="Housing Price Prediction"
+                        class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-white">Housing Price Prediction</h3>
+                    <p class="text-gray-300 mt-2">Machine learning model predicting housing prices using various
+                        property attributes.</p>
+                </div>
+
+                <!-- Project 2: Crude Oil Price Forecasting -->
+                <div
+                    class="border-2 border-gray-500 p-6 rounded-lg shadow-lg hover:bg-gray-500 hover:scale-105 transition-transform duration-300">
+                    <img src="photos/oil.jpg" alt="Crude Oil Price Forecasting"
+                        class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-white">Crude Oil Price Forecasting</h3>
+                    <p class="text-gray-300 mt-2">ARIMA model for forecasting crude oil prices using historical Yahoo
+                        Finance data.</p>
+                </div>
+
+                <!-- Project 3: Sentiment Analysis on Financial News -->
+                <a href="https://github.com/yourusername/your-repo" target="_blank" class="block">
+                    <div
+                        class="border-2 border-gray-500 p-6 rounded-lg shadow-lg hover:bg-gray-500 hover:scale-105 transition-transform duration-300">
+                        <img src="photos/Sentiment-Analysis.png" alt="Sentiment Analysis on Financial News"
+                            class="w-full h-40 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-white">Sentiment Analysis on Financial News</h3>
+                        <p class="text-gray-300 mt-2">Analyzing sentiment in financial news articles to assess market
+                            trends.</p>
+                        <div class="mt-4">
+                            <i class="fab fa-github text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Technology Stack Section -->
+    <section id="tech-stack" class="py-16 px-6 bg-gray-800">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Technology Stack</h2>
+            <p class="max-w-2xl mx-auto text-gray-300 mb-8">These are the technologies I specialize in and use for
+                development.</p>
+
+            <!-- Technology Stack Grid -->
+            <div class="flex justify-center gap-8 flex-wrap">
+                <!-- Azure -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/azure.png" alt="Azure" class="w-24 h-24">
+                </div>
+
+                <!-- Python -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/python.png" alt="Python" class="w-24 h-24">
+                </div>
+
+                <!-- Power BI -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/power bi.png" alt="Power BI" class="w-24 h-24">
+                </div>
+
+                <!-- R Programming -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/r.png" alt="R Programming" class="w-24 h-24">
+                </div>
+                <!--Excell -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/excell.png" alt="Excell" class="w-24 h-24">
+                </div>
+                <!--sql -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/sql.png" alt="sql" class="w-24 h-24">
+                </div>
+                <!--sklearn -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/sklearn.png" alt="sklearn" class="w-24 h-24">
+                </div>
+                <!--jupyter -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/jupyter.png" alt="jupyter" class="w-24 h-24">
+                </div>
+                <!--Pandas -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/pandas-logo.png" alt="pandas" class="w-24 h-24">
+                </div>
+                <!--Numpy -->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/numpy.png" alt="numpy" class="w-24 h-24">
+                </div>
+                <!--Fabric-->
+                <div class="transition-transform transform hover:scale-110">
+                    <img src="photos/fabric.png" alt="fabric" class="w-24 h-24">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Me Section -->
+    <section id="contact" class="py-16 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+            <p class="max-w-2xl mx-auto text-gray-300">
+                Feel free to reach out for collaborations or inquiries.
+            </p>
+
+            <!-- Email Contact -->
+            <p class="mt-4 text-lg text-gray-300">
+                If you want to contact me, reach me out by email:
+                <a href="mailto:your.email@example.com"
+                    class="text-blue-400 hover:underline">virajpathirana35@gmail.com</a>
+            </p>
+
+            <!-- Social Media Icons -->
+            <div class="mt-6 flex justify-center space-x-6">
+                <!-- Facebook Icon -->
+                <a href="https://facebook.com/yourprofile" target="_blank" class="text-gray-300 hover:text-blue-500">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M22 12a10 10 0 10-11.5 9.9v-7H8v-3h2.5V9.5a3.5 3.5 0 013.5-3.5h3v3h-2c-.8 0-1.5.7-1.5 1.5V12H17l-1 3h-2.5v7A10 10 0 0022 12z" />
+                    </svg>
+                </a>
+
+                <!-- LinkedIn Icon -->
+                <a href="www.linkedin.com/in/viraj-pathirana-aa01bb2a0" target="_blank"
+                    class="text-gray-300 hover:text-blue-600">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4.98 3.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5zM3 8.75h3.95V20H3zM9 8.75h3.5v1.77h.05a3.84 3.84 0 013.45-1.9c3.69 0 4.37 2.42 4.37 5.57V20h-3.95v-5.47c0-1.3-.03-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88V20H9z" />
+                    </svg>
+                </a>
+
+                <!-- GitHub Icon -->
+                <a href="https://github.com/VirajBuwaneka" target="_blank" class="text-gray-300 hover:text-gray-400">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48 0-.24-.01-.86-.01-1.69-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.61.07-.61 1 .07 1.53 1.02 1.53 1.02.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.32-2.22-.26-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.02-2.68-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.02A9.57 9.57 0 0112 6.8a9.57 9.57 0 012.5.34c1.9-1.29 2.75-1.02 2.75-1.02.55 1.41.2 2.45.1 2.71.64.7 1.02 1.59 1.02 2.68 0 3.85-2.35 4.69-4.58 4.94.36.31.69.91.69 1.83 0 1.32-.01 2.38-.01 2.71 0 .26.18.58.69.48A10.004 10.004 0 0022 12c0-5.52-4.48-10-10-10z" />
+                    </svg>
+                </a>
+
+                <!-- Medium Icon -->
+                <a href="https://medium.com/@virajpathirana35 target=" _blank"
+                    class="text-gray-300 hover:text-green-600">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M4.06 7.04c0-.25-.2-.46-.45-.46H.45c-.25 0-.45.2-.45.46v10c0 .25.2.46.45.46h3.16c.25 0 .45-.2.45-.46v-10zm7.94 2.92c0-.37-.11-.67-.34-.91-.22-.24-.55-.36-.96-.36H6.48c-.41 0-.73.12-.96.36-.22.24-.34.54-.34.91v6.23c0 .37.11.67.34.91.22.24.55.36.96.36h4.22c.41 0 .73-.12.96-.36.22-.24.34-.54.34-.91V9.96zm9.94 3.6c0-.44-.17-.84-.5-1.2-.33-.36-.8-.54-1.37-.54-.58 0-1.04.18-1.37.54-.33.36-.5.76-.5 1.2v2.93c0 .44.17.84.5 1.2.33.36.8.54 1.37.54.58 0 1.04-.18 1.37-.54.33-.36.5-.76.5-1.2v-2.93z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-800 text-center">
+        <p class="text-gray-400">&copy; 2025 Viraj Buwaneka. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

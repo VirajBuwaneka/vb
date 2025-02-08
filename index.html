@@ -106,7 +106,6 @@
             });
         });
     </script>
-
     <!-- Hero Section -->
     <section id="home"
         class="h-screen flex flex-col justify-center items-center text-center relative pt-20 overflow-hidden bg-[#0a0a0a]">
@@ -123,11 +122,12 @@
 
                 <!-- Text Content -->
                 <div class="text-center md:text-left mb-8 md:mb-0">
-                    <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-sans">
+                    <h2 class="text-2xl sm:text-4xl md:text-5xl font-extrabold font-poppins">
                         Hello Guys!
                     </h2>
-                    <p class="mt-4 text-sm sm:text-base md:text-lg font-sans">
-                        I'm Viraj Buwaneka, showcasing my work and projects.
+                    <p class="mt-4 text-sm sm:text-base md:text-lg font-roboto">
+                        I'm <span class="text-teal-400 font-bold">Viraj Buwaneka</span>, showcasing my work and
+                        projects.
                         I am passionate about Machine Learning and Cloud Technologies.
                     </p>
                 </div>
@@ -164,6 +164,18 @@
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.7);
             transition: all 0.3s ease;
         }
+
+        /* Import Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+
+        /* Font for Text */
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .font-roboto {
+            font-family: 'Roboto', sans-serif;
+        }
     </style>
 
     <!-- JavaScript for Mouse Effects -->
@@ -182,20 +194,26 @@
 
 
 
-
-
-
-
-
-
     <!-- About Me Section -->
     <section id="about" class="py-16 px-6">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-6">About Me</h2>
             <p class="max-w-2xl mx-auto text-gray-300">
-                I'm a third-year undergraduate pursuing a BSc (Hons) in Financial Mathematics & Industrial Statistics at
-                the University of Ruhuna. Passionate about data, machine learning, and cloud technologies, I
-                continuously explore ways to transform data into meaningful insights for impactful decision-making.
+                I am currently a 3rd-year undergraduate pursuing a BSc (Hons) in Financial Mathematics & Industrial
+                Statistics at the University of Ruhuna. My passion lies in data analysis, statistical analysis, and
+                machine learning. I am particularly fascinated by how data can reveal trends and drive impactful
+                decisions.
+
+                I enjoy working with a team to solve complex problems and embrace new challenges. I am continuously
+                looking for ways to grow and learn, especially in the data field. My skills extend to various tools and
+                technologies, including Azure, where I hold the AZ-900 certification. However, my true focus is on
+                understanding and analyzing data, as it fuels my enthusiasm for discovering insights and innovations.
+
+                Data excites me because of its power to reveal patterns and shape future decisions. I'm always eager to
+                explore new techniques and contribute to meaningful projects in the realm of machine learning and data
+                analysis.
+
+
             </p>
             <p class="max-w-2xl mx-auto text-gray-300 mt-4">
                 Always eager to learn and grow, I embrace new challenges that enhance my analytical and problem-solving
@@ -343,6 +361,8 @@
             </div>
         </div>
     </section>
+
+
     <!-- Projects Section -->
     <section id="projects" class="py-16 px-6 bg-gray-700">
         <div class="container mx-auto text-center">
@@ -350,50 +370,82 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- Project 1: Housing Price Prediction -->
-                <div
-                    class="border-2 border-gray-500 p-6 rounded-lg shadow-lg hover:bg-gray-500 hover:scale-105 transition-transform duration-300">
+                <div class="border-2 border-gray-500 p-6 rounded-lg shadow-lg transition-transform duration-300">
                     <img src="photos/housing.jpg" alt="Housing Price Prediction"
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-white">Housing Price Prediction</h3>
                     <p class="text-gray-300 mt-2">Machine learning model predicting housing prices using various
                         property attributes.</p>
+                    <!-- GitHub Icon with Link -->
+                    <a href="https://github.com/yourusername/housing-price-prediction" target="_blank"
+                        class="click-here text-white text-lg flex items-center justify-center mt-4">
+                        <i class="fab fa-github text-white text-2xl mr-2"></i>Click Here to View on GitHub
+                    </a>
                 </div>
 
                 <!-- Project 2: Crude Oil Price Forecasting -->
-                <div
-                    class="border-2 border-gray-500 p-6 rounded-lg shadow-lg hover:bg-gray-500 hover:scale-105 transition-transform duration-300">
+                <div class="border-2 border-gray-500 p-6 rounded-lg shadow-lg transition-transform duration-300">
                     <img src="photos/oil.jpg" alt="Crude Oil Price Forecasting"
                         class="w-full h-40 object-cover rounded-md mb-4">
                     <h3 class="text-xl font-semibold text-white">Crude Oil Price Forecasting</h3>
                     <p class="text-gray-300 mt-2">ARIMA model for forecasting crude oil prices using historical Yahoo
                         Finance data.</p>
+                    <!-- GitHub Icon with Link -->
+                    <a href="https://github.com/yourusername/crude-oil-price-forecasting" target="_blank"
+                        class="click-here text-white text-lg flex items-center justify-center mt-4">
+                        <i class="fab fa-github text-white text-2xl mr-2"></i>Click Here to View on GitHub
+                    </a>
                 </div>
 
                 <!-- Project 3: Sentiment Analysis on Financial News -->
-                <a href="https://github.com/yourusername/your-repo" target="_blank" class="block">
-                    <div
-                        class="border-2 border-gray-500 p-6 rounded-lg shadow-lg hover:bg-gray-500 hover:scale-105 transition-transform duration-300">
-                        <img src="photos/Sentiment-Analysis.png" alt="Sentiment Analysis on Financial News"
-                            class="w-full h-40 object-cover rounded-md mb-4">
-                        <h3 class="text-xl font-semibold text-white">Sentiment Analysis on Financial News</h3>
-                        <p class="text-gray-300 mt-2">Analyzing sentiment in financial news articles to assess market
-                            trends.</p>
-                        <div class="mt-4">
-                            <i class="fab fa-github text-white text-2xl"></i>
-                        </div>
-                    </div>
-                </a>
-
+                <div class="border-2 border-gray-500 p-6 rounded-lg shadow-lg transition-transform duration-300">
+                    <img src="photos/Sentiment-Analysis.png" alt="Sentiment Analysis on Financial News"
+                        class="w-full h-40 object-cover rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-white">Sentiment Analysis on Financial News</h3>
+                    <p class="text-gray-300 mt-2">Analyzing sentiment in financial news articles to assess market
+                        trends.</p>
+                    <!-- GitHub Icon with Link -->
+                    <a href="https://github.com/VirajBuwaneka/Sentiment_analysis_project.git" target="_blank"
+                        class="click-here text-white text-lg flex items-center justify-center mt-4">
+                        <i class="fab fa-github text-white text-2xl mr-2"></i>Click Here to View on GitHub
+                    </a>
+                </div>
 
             </div>
         </div>
     </section>
 
+    <!-- Tailwind Custom Styles -->
+    <style>
+        /* Apply hover effect only on the 'Click Here to GitHub' link */
+        .click-here:hover {
+            background-color: #4CAF50;
+            /* Change background on hover */
+            color: white;
+            /* Change text color */
+            transition: all 0.3s ease;
+            cursor: pointer;
+            /* Make it look clickable */
+        }
+
+        /* Optional: Add padding or other styles to 'Click Here' for better interaction */
+        .click-here {
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        /* Remove any other hover effect from the project card */
+        .border-2:hover {
+            scale: none;
+        }
+    </style>
+
+
 
 
 
     <!-- Technology Stack Section -->
-    <section id="tech-stack" class="py-16 px-6 bg-gray-800">
+    <section id="tech-stack" class="py-16 px-6 bg-gray-800 relative">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold text-white mb-6">Technology Stack</h2>
             <p class="max-w-2xl mx-auto text-gray-300 mb-8">These are the technologies I specialize in and use for
@@ -401,56 +453,79 @@
 
             <!-- Technology Stack Grid -->
             <div class="flex justify-center gap-8 flex-wrap">
-                <!-- Azure -->
-                <div class="transition-transform transform hover:scale-110">
+                <!-- Technology Icons (with hover scale effect) -->
+                <div class="tech-icon transition-transform transform hover:scale-110">
                     <img src="photos/azure.png" alt="Azure" class="w-24 h-24">
                 </div>
 
-                <!-- Python -->
-                <div class="transition-transform transform hover:scale-110">
+                <div class="tech-icon transition-transform transform hover:scale-110">
                     <img src="photos/python.png" alt="Python" class="w-24 h-24">
                 </div>
 
-                <!-- Power BI -->
-                <div class="transition-transform transform hover:scale-110">
+                <div class="tech-icon transition-transform transform hover:scale-110">
                     <img src="photos/power bi.png" alt="Power BI" class="w-24 h-24">
                 </div>
 
-                <!-- R Programming -->
-                <div class="transition-transform transform hover:scale-110">
+                <div class="tech-icon transition-transform transform hover:scale-110">
                     <img src="photos/r.png" alt="R Programming" class="w-24 h-24">
                 </div>
-                <!--Excell -->
-                <div class="transition-transform transform hover:scale-110">
+
+                <div class="tech-icon transition-transform transform hover:scale-110">
                     <img src="photos/excell.png" alt="Excell" class="w-24 h-24">
                 </div>
-                <!--sql -->
-                <div class="transition-transform transform hover:scale-110">
-                    <img src="photos/sql.png" alt="sql" class="w-24 h-24">
+
+                <div class="tech-icon transition-transform transform hover:scale-110">
+                    <img src="photos/sql.png" alt="SQL" class="w-24 h-24">
                 </div>
-                <!--sklearn -->
-                <div class="transition-transform transform hover:scale-110">
-                    <img src="photos/sklearn.png" alt="sklearn" class="w-24 h-24">
+
+                <div class="tech-icon transition-transform transform hover:scale-110">
+                    <img src="photos/sklearn.png" alt="Sklearn" class="w-24 h-24">
                 </div>
-                <!--jupyter -->
-                <div class="transition-transform transform hover:scale-110">
-                    <img src="photos/jupyter.png" alt="jupyter" class="w-24 h-24">
+
+                <div class="tech-icon transition-transform transform hover:scale-110">
+                    <img src="photos/jupyter.png" alt="Jupyter" class="w-24 h-24">
                 </div>
-                <!--Pandas -->
-                <div class="transition-transform transform hover:scale-110">
-                    <img src="photos/pandas-logo.png" alt="pandas" class="w-24 h-24">
+
+                <div class="tech-icon transition-transform transform hover:scale-110">
+                    <img src="photos/pandas-logo.png" alt="Pandas" class="w-24 h-24">
                 </div>
-                <!--Numpy -->
-                <div class="transition-transform transform hover:scale-110">
-                    <img src="photos/numpy.png" alt="numpy" class="w-24 h-24">
+
+                <div class="tech-icon transition-transform transform hover:scale-110">
+                    <img src="photos/numpy.png" alt="Numpy" class="w-24 h-24">
                 </div>
-                <!--Fabric-->
-                <div class="transition-transform transform hover:scale-110">
-                    <img src="photos/fabric.png" alt="fabric" class="w-24 h-24">
+
+                <div class="tech-icon transition-transform transform hover:scale-110">
+                    <img src="photos/fabric.png" alt="Fabric" class="w-24 h-24">
                 </div>
             </div>
         </div>
+
+        <!-- Mouse movement effect -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="tech-effect"></div>
+        </div>
     </section>
+
+    <!-- JavaScript for Mouse Movement Effect -->
+    <script>
+        const techIcons = document.querySelectorAll('.tech-icon');
+        const techEffect = document.querySelector('.tech-effect');
+
+        window.addEventListener('mousemove', (e) => {
+            techEffect.style.transform = `translate(-${e.clientX / 50}px, -${e.clientY / 50}px)`;
+        });
+
+        techIcons.forEach(icon => {
+            icon.addEventListener('mouseover', () => {
+                techEffect.style.transition = 'transform 0.5s ease-out';
+            });
+
+            icon.addEventListener('mouseout', () => {
+                techEffect.style.transition = 'transform 0.2s ease-in';
+            });
+        });
+    </script>
+
 
     <!-- Contact Me Section -->
     <section id="contact" class="py-16 px-6">

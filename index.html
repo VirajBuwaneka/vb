@@ -9,9 +9,8 @@
 </head>
 
 <body class="bg-gray-900 text-white">
-
     <!-- Navbar -->
-    <nav class="p-5 bg-gray-800 shadow-lg fixed top-0 left-0 w-full z-50">
+    <nav class="p-5 bg-[#1C1C1E] shadow-lg fixed top-0 left-0 w-full z-50">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
             <h1 class="text-2xl font-bold text-white">Portfolio</h1>
@@ -36,7 +35,7 @@
 
         <!-- Mobile Menu (Hidden by default) -->
         <div id="mobile-menu"
-            class="hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-90 text-white flex flex-col items-center justify-center space-y-6 transform translate-x-full transition-all duration-500">
+            class="hidden md:hidden fixed inset-0 bg-[#141414] bg-opacity-90 text-white flex flex-col items-center justify-center space-y-6 transform translate-x-full transition-all duration-500">
             <!-- Close Icon -->
             <button id="close-menu" class="absolute top-5 right-5 text-3xl text-white focus:outline-none">
                 ✖
@@ -106,6 +105,10 @@
             });
         });
     </script>
+
+
+
+
     <!-- Hero Section -->
     <section id="home"
         class="h-screen flex flex-col justify-center items-center text-center relative pt-20 overflow-hidden bg-[#0a0a0a]">
@@ -191,192 +194,282 @@
 
 
 
-
-
-
     <!-- About Me Section -->
-    <section id="about" class="py-16 px-6">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-6">About Me</h2>
-            <p class="max-w-2xl mx-auto text-gray-300">
-                I am currently a 3rd-year undergraduate pursuing a BSc (Hons) in Financial Mathematics & Industrial
-                Statistics at the University of Ruhuna. My passion lies in data analysis, statistical analysis, and
-                machine learning. I am particularly fascinated by how data can reveal trends and drive impactful
+    <section id="about" class="py-20 px-6 bg-black text-gray-100">
+        <div class="container mx-auto text-center max-w-5xl">
+            <h2 class="text-5xl font-semibold mb-8 opacity-0 translate-y-10 transition-all duration-700"
+                id="about-heading">
+                About Me
+            </h2>
+            <p class="max-w-3xl mx-auto text-lg text-gray-300 opacity-0 translate-y-10 transition-all duration-700"
+                id="about-text">
+                Currently a 3rd-year undergraduate at the University of Ruhuna, specializing in Financial Mathematics &
+                Industrial Statistics. Passionate about <strong>data analysis, statistical modeling, and machine
+                    learning.</strong>
+                Enthusiastic about transforming <strong>raw data into actionable insights</strong> that drive impactful
                 decisions.
-
-                I enjoy working with a team to solve complex problems and embrace new challenges. I am continuously
-                looking for ways to grow and learn, especially in the data field. My skills extend to various tools and
-                technologies, including Azure, where I hold the AZ-900 certification. However, my true focus is on
-                understanding and analyzing data, as it fuels my enthusiasm for discovering insights and innovations.
-
-                Data excites me because of its power to reveal patterns and shape future decisions. I'm always eager to
-                explore new techniques and contribute to meaningful projects in the realm of machine learning and data
-                analysis.
-
-
             </p>
-            <p class="max-w-2xl mx-auto text-gray-300 mt-4">
-                Always eager to learn and grow, I embrace new challenges that enhance my analytical and problem-solving
-                skills. Let's connect and explore opportunities together!
+
+            <p class="max-w-3xl mx-auto text-lg text-gray-300 mt-6 opacity-0 translate-y-10 transition-all duration-700"
+                id="about-text-2">
+                Certified in <strong>Microsoft Azure (AZ-900)</strong> and experienced in data analytics. Thrives in
+                <strong>collaborative
+                    environments</strong> and enjoys tackling complex challenges. <strong>Always eager to innovate,
+                    learn, and explore</strong> new
+                technologies in the data space.
             </p>
 
             <!-- Education Section -->
-            <div class="mt-12 border-2 border-gray-500 rounded-lg p-6">
-                <h2 class="text-3xl font-bold text-white mb-6">Education</h2>
+            <div class="mt-12 backdrop-blur-lg bg-white/10 shadow-xl rounded-2xl p-8 opacity-0 translate-y-10 transition-all duration-700"
+                id="education">
+                <h2 class="text-3xl font-semibold mb-6">Education</h2>
 
                 <!-- Degree Information -->
-                <div class="mt-6">
-                    <h3 class="text-2xl font-semibold text-white">BSc (Hons) Financial Mathematics and Industrial
-                        Statistics</h3>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">University of Ruhuna | Matara</p>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">Department of Mathematics, Faculty of Science</p>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2 font-bold">2022 - 2026</p>
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold">BSc (Hons) Financial Mathematics & Industrial Statistics</h3>
+                    <p class="text-gray-400 mt-2">University of Ruhuna | 2022 - 2026</p>
                 </div>
 
-                <!-- A/L Results -->
-                <div class="mt-8">
-                    <h3 class="text-2xl font-semibold text-white">GCE Advanced Level</h3>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">Kegalu Vidyalaya | Kegalle</p>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">Chemistry: A, Combined Mathematics: B, Physics: C
-                    </p>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2 font-bold">2017 - 2019</p>
+                <!-- Advanced Level -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold">GCE Advanced Level</h3>
+                    <p class="text-gray-400 mt-2">Kegalu Vidyalaya | 2017 - 2019</p>
+                    <p class="text-gray-400">Chemistry: A | Mathematics: B | Physics: C</p>
                 </div>
 
-                <!-- O/L Results -->
-                <div class="mt-8">
-                    <h3 class="text-2xl font-semibold text-white">GCE Ordinary Level</h3>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">Kegalu Vidyalaya | Kegalle</p>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2">9A's Passes</p>
-                    <p class="max-w-2xl mx-auto text-gray-300 mt-2 font-bold">2016</p>
+                <!-- Ordinary Level -->
+                <div>
+                    <h3 class="text-2xl font-semibold">GCE Ordinary Level</h3>
+                    <p class="text-gray-400 mt-2">Kegalu Vidyalaya | 2016</p>
+                    <p class="text-gray-400">9A Passes</p>
                 </div>
             </div>
 
             <!-- Certificates Section -->
-            <div class="mt-12 border-2 border-gray-500 rounded-lg p-6">
-                <h2 class="text-3xl font-bold text-white mb-6">Certificates</h2>
+            <div class="mt-12 backdrop-blur-lg bg-white/10 shadow-xl rounded-2xl p-8 opacity-0 translate-y-10 transition-all duration-700"
+                id="certifications">
+                <h2 class="text-3xl font-semibold mb-6">Certificates</h2>
 
                 <!-- AZ-900 Certification -->
-                <div class="mt-6">
-                    <h3 class="text-2xl font-semibold text-white">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold">Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
                     <a href="https://learn.microsoft.com/en-us/users/virajpathirana-5880/credentials/1fcbb4ea86049cea"
                         target="_blank">
-                        <img src="photos/AZ.png" alt="AZ-900 Badge"
-                            class="mx-auto mt-4 w-32 h-32 transition-transform duration-300 hover:scale-110 cursor-pointer">
+                        <img src="photos/AZ.png" alt="AZ-900 Badge" loading="lazy"
+                            class="mx-auto mt-4 w-24 h-24 opacity-0 transition-opacity duration-500 ease-in-out lazy-load">
                     </a>
                 </div>
 
-
                 <!-- Power Apps Certification -->
-                <div class="mt-6">
-                    <h3 class="text-2xl font-semibold text-white">Microsoft Power Apps Digital Badge (Including Power
-                        Automate)</h3>
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold">Microsoft Power Apps Digital Badge</h3>
+                    <p class="text-gray-400 mt-2">Includes Power Automate</p>
                 </div>
 
                 <!-- Fabric Certification -->
-                <div class="mt-6">
-                    <h3 class="text-2xl font-semibold text-white">Microsoft Fabric Course Completion (Udemy)</h3>
+                <div>
+                    <h3 class="text-2xl font-semibold">Microsoft Fabric Course Completion</h3>
+                    <p class="text-gray-400 mt-2">Udemy</p>
                 </div>
             </div>
-
         </div>
     </section>
 
+    <!-- Scroll Animation Script -->
+    <script>
+        const revealOnScroll = () => {
+            document.querySelectorAll('.opacity-0').forEach(element => {
+                if (element.getBoundingClientRect().top < window.innerHeight - 100) {
+                    element.classList.remove('opacity-0', 'translate-y-10');
+                    element.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
 
+            // Lazy load images
+            document.querySelectorAll('img.lazy-load').forEach(img => {
+                if (img.getBoundingClientRect().top < window.innerHeight && !img.classList.contains('loaded')) {
+                    img.classList.add('loaded');
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                }
+            });
+        };
 
-    <!-- Add the following styles for responsiveness -->
+        window.addEventListener('scroll', revealOnScroll);
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+
+    <!-- Tailwind Custom Styles -->
     <style>
-        /* Ensure hero and about sections are separate on smaller screens */
-        @media (max-width: 768px) {
-            #home {
-                flex-direction: column !important;
-                /* Stack items vertically on smaller screens */
-            }
-
-            .text-content {
-                text-align: center;
-                /* Center the text on small screens */
-            }
-
-            .image-container {
-                margin-top: 2rem;
-                width: 100%;
-                /* Make image take full width on smaller screens */
-            }
+        /* Smooth fade-in effect */
+        .opacity-100 {
+            opacity: 1 !important;
         }
 
-        @media (max-width: 480px) {
-            .text-content h2 {
-                font-size: 2xl;
-            }
+        /* Lazy Load Fade-in */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+    </style>
+
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+
+
+    <!-- Articles Section -->
+    <section id="articles" class="py-16 px-6 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold mb-6 text-orange-500 opacity-0 translate-y-10 transition-all duration-700"
+                id="articles-heading">
+                Articles
+            </h2>
+            <p class="max-w-2xl mx-auto text-gray-600 opacity-0 translate-y-10 transition-all duration-700"
+                id="articles-text">
+                Here are some articles I've written on technology, programming, and industry trends.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                <!-- Article 1 -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all opacity-0 translate-y-10 duration-700 hover:shadow-orange-500 hover:scale-105"
+                    id="article-1">
+                    <h3 class="text-xl font-semibold mb-4 text-orange-500">Machine Learning</h3>
+                    <img src="photos/1.jpg" alt="Article 1" loading="lazy"
+                        class="w-full h-48 object-cover rounded-lg mb-4 lazy-load">
+                    <p class="text-gray-600">Brief description of the article.</p>
+                </div>
+
+                <!-- Article 2 -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all opacity-0 translate-y-10 duration-700 hover:shadow-orange-500 hover:scale-105"
+                    id="article-2">
+                    <h3 class="text-xl font-semibold mb-4 text-orange-500">Scikit-Learn Pipelines</h3>
+                    <img src="photos/2.png" alt="Article 2" loading="lazy"
+                        class="w-full h-48 object-cover rounded-lg mb-4 lazy-load">
+                    <p class="text-gray-600">
+                        Scikit-learn Pipelines streamline machine learning workflows by chaining preprocessing steps and
+                        models into a single object...
+                    </p>
+                </div>
+
+                <!-- Article 3 -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all opacity-0 translate-y-10 duration-700 hover:shadow-orange-500 hover:scale-105"
+                    id="article-3">
+                    <h3 class="text-xl font-semibold mb-4 text-orange-500">Azure Storage Accounts</h3>
+                    <img src="photos/3.jpg" alt="Article 3" loading="lazy"
+                        class="w-full h-48 object-cover rounded-lg mb-4 lazy-load">
+                    <p class="text-gray-600">
+                        Azure Storage Accounts provide scalable, secure, and highly available cloud storage for data...
+                    </p>
+                </div>
+
+                <!-- Article 4 -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all opacity-0 translate-y-10 duration-700 hover:shadow-orange-500 hover:scale-105"
+                    id="article-4">
+                    <h3 class="text-xl font-semibold mb-4 text-orange-500">Article 4</h3>
+                    <img src="photos/4.jpeg" alt="Article 4" loading="lazy"
+                        class="w-full h-48 object-cover rounded-lg mb-4 lazy-load">
+                    <p class="text-gray-600">Brief description of the article.</p>
+                </div>
+
+                <!-- Article 5 -->
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all opacity-0 translate-y-10 duration-700 hover:shadow-orange-500 hover:scale-105"
+                    id="article-5">
+                    <h3 class="text-xl font-semibold mb-4 text-orange-500">Using Microsoft Fabric for Kaggle</h3>
+                    <img src="photos/5.jpeg" alt="Article 5" loading="lazy"
+                        class="w-full h-48 object-cover rounded-lg mb-4 lazy-load">
+                    <p class="text-gray-600">
+                        Microsoft Fabric enhances Kaggle projects by providing a unified analytics platform with
+                        integrated
+                        compute, storage, and AI...
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Animation & Lazy Load Script -->
+    <script>
+        const revealOnScroll = () => {
+            document.querySelectorAll('.opacity-0').forEach(element => {
+                if (element.getBoundingClientRect().top < window.innerHeight - 100) {
+                    element.classList.remove('opacity-0', 'translate-y-10');
+                    element.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+
+            // Lazy load images
+            document.querySelectorAll('img.lazy-load').forEach(img => {
+                if (img.getBoundingClientRect().top < window.innerHeight && !img.classList.contains('loaded')) {
+                    img.classList.add('loaded');
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+
+    <!-- Tailwind Custom Styles -->
+    <style>
+        /* Smooth fade-in effect */
+        .opacity-100 {
+            opacity: 1 !important;
+        }
+
+        /* Lazy Load Fade-in */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+
+        /* Apple-style smooth shadow */
+        .shadow-lg {
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .hover\:shadow-xl:hover {
+            box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Orange shadow on hover */
+        .hover\:shadow-orange-500:hover {
+            box-shadow: 0px 6px 18px rgba(255, 165, 0, 0.5);
+            /* Orange shadow */
+        }
+
+        /* Scale on hover */
+        .hover\:scale-105:hover {
+            transform: scale(1.05);
         }
     </style>
 
 
-    <!-- Articles Section -->
-    <section id="articles" class="py-16 px-6 bg-gray-800">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-6">Articles</h2>
-            <p class="max-w-2xl mx-auto text-gray-300">Here are some articles I've written on technology, programming,
-                and industry trends.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
-                    <h3 class="text-xl font-semibold mb-4">Machine Learning</h3>
-                    <img src="photos\1.jpg" alt="Article 1" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <p class="text-gray-300">Brief description of the article.</p>
-                </div>
-                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
-                    <h3 class="text-xl font-semibold mb-4">Scikit-Learn Pipelines</h3>
-                    <img src="photos\2.png" alt="Article 2" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <p class="text-gray-300">Scikit-learn Pipelines streamline machine learning workflows by chaining
-                        preprocessing steps and models into a single object. They ensure seamless data transformation,
-                        feature selection, and model training while preventing data leakage. Pipelines improve code
-                        efficiency, reproducibility, and scalability, making them essential for structured machine
-                        learning development in Python.</p>
-                </div>
-                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
-                    <h3 class="text-xl font-semibold mb-4">Azure storage Accounts</h3>
-                    <img src="photos\3.jpg" alt="Article 3" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <p class="text-gray-300">Azure Storage Accounts provide scalable, secure, and highly available cloud
-                        storage for data. They support multiple storage types, including Blob, File, Queue, Table, and
-                        Disk storage, catering to diverse workloads. With features like redundancy, access control, and
-                        integration with Azure services, they ensure reliable data management for applications and
-                        analytics.</p>
-                </div>
-                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
-                    <h3 class="text-xl font-semibold mb-4">Article 3</h3>
-                    <img src="photos\4.jpeg" alt="Article 3" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <p class="text-gray-300">Brief description of the article.</p>
-                </div>
-                <div class="bg-gray-700 rounded-xl p-6 text-center hover:scale-105 transition-transform">
-                    <h3 class="text-xl font-semibold mb-4">Using Microsoft Fabric for Kaggle</h3>
-                    <img src="photos\5.jpeg" alt="Article 3" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <p class="text-gray-300">Microsoft Fabric enhances Kaggle projects by providing a unified analytics
-                        platform with integrated compute, storage, and AI capabilities. It allows seamless data
-                        ingestion, transformation, and model training using lakehouses, notebooks, and pipelines. With
-                        built-in scalability and security, Fabric simplifies end-to-end machine learning workflows for
-                        efficient data analysis and experimentation.</p>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-
     <!-- Projects Section -->
-    <section id="projects" class="py-16 px-6 bg-gray-700">
+    <section id="projects" class="py-16 px-6 bg-black">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-6 text-white">Projects</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-
+            <h2 class="text-4xl font-semibold mb-6 text-white opacity-0 translate-y-10 transition-all duration-700"
+                id="projects-heading">
+                Projects
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8" id="projects-grid">
                 <!-- Project 1: Housing Price Prediction -->
-                <div class="border-2 border-gray-500 p-6 rounded-lg shadow-lg transition-transform duration-300">
+                <div class="project-card bg-black text-white border-2 border-black rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
+                    id="project1">
                     <img src="photos/housing.jpg" alt="Housing Price Prediction"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-white">Housing Price Prediction</h3>
+                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
+                    <h3 class="text-xl font-semibold">Housing Price Prediction</h3>
                     <p class="text-gray-300 mt-2">Machine learning model predicting housing prices using various
                         property attributes.</p>
-                    <!-- GitHub Icon with Link -->
                     <a href="https://github.com/yourusername/housing-price-prediction" target="_blank"
                         class="click-here text-white text-lg flex items-center justify-center mt-4">
                         <i class="fab fa-github text-white text-2xl mr-2"></i>Click Here to View on GitHub
@@ -384,13 +477,13 @@
                 </div>
 
                 <!-- Project 2: Crude Oil Price Forecasting -->
-                <div class="border-2 border-gray-500 p-6 rounded-lg shadow-lg transition-transform duration-300">
+                <div class="project-card bg-black text-white border-2 border-black rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
+                    id="project2">
                     <img src="photos/oil.jpg" alt="Crude Oil Price Forecasting"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-white">Crude Oil Price Forecasting</h3>
+                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
+                    <h3 class="text-xl font-semibold">Crude Oil Price Forecasting</h3>
                     <p class="text-gray-300 mt-2">ARIMA model for forecasting crude oil prices using historical Yahoo
                         Finance data.</p>
-                    <!-- GitHub Icon with Link -->
                     <a href="https://github.com/yourusername/crude-oil-price-forecasting" target="_blank"
                         class="click-here text-white text-lg flex items-center justify-center mt-4">
                         <i class="fab fa-github text-white text-2xl mr-2"></i>Click Here to View on GitHub
@@ -398,48 +491,96 @@
                 </div>
 
                 <!-- Project 3: Sentiment Analysis on Financial News -->
-                <div class="border-2 border-gray-500 p-6 rounded-lg shadow-lg transition-transform duration-300">
+                <div class="project-card bg-black text-white border-2 border-black rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
+                    id="project3">
                     <img src="photos/Sentiment-Analysis.png" alt="Sentiment Analysis on Financial News"
-                        class="w-full h-40 object-cover rounded-md mb-4">
-                    <h3 class="text-xl font-semibold text-white">Sentiment Analysis on Financial News</h3>
+                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
+                    <h3 class="text-xl font-semibold">Sentiment Analysis on Financial News</h3>
                     <p class="text-gray-300 mt-2">Analyzing sentiment in financial news articles to assess market
                         trends.</p>
-                    <!-- GitHub Icon with Link -->
                     <a href="https://github.com/VirajBuwaneka/Sentiment_analysis_project.git" target="_blank"
                         class="click-here text-white text-lg flex items-center justify-center mt-4">
                         <i class="fab fa-github text-white text-2xl mr-2"></i>Click Here to View on GitHub
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- JavaScript for Scroll Animation and Lazy Loading -->
+    <script>
+        const revealOnScroll = () => {
+            document.querySelectorAll('.opacity-0').forEach(element => {
+                if (element.getBoundingClientRect().top < window.innerHeight - 100) {
+                    element.classList.remove('opacity-0', 'translate-y-10');
+                    element.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+
+            // Lazy load images
+            document.querySelectorAll('img.lazy-load').forEach(img => {
+                if (img.getBoundingClientRect().top < window.innerHeight && !img.classList.contains('loaded')) {
+                    img.classList.add('loaded');
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+
     <!-- Tailwind Custom Styles -->
     <style>
-        /* Apply hover effect only on the 'Click Here to GitHub' link */
-        .click-here:hover {
-            background-color: #4CAF50;
-            /* Change background on hover */
-            color: white;
-            /* Change text color */
-            transition: all 0.3s ease;
-            cursor: pointer;
-            /* Make it look clickable */
+        .opacity-100 {
+            opacity: 1 !important;
         }
 
-        /* Optional: Add padding or other styles to 'Click Here' for better interaction */
+        /* Lazy Load Fade-in */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+
+        /* Hover effect for the 'Click Here to GitHub' link */
+        .click-here:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
         .click-here {
             padding: 8px 16px;
             border-radius: 4px;
         }
 
-        /* Remove any other hover effect from the project card */
-        .border-2:hover {
-            scale: none;
+        /* Project cards styling */
+        .project-card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        /* Adjust opacity for non-hover state */
+        .project-card:not(:hover) {
+            opacity: 0.9;
+        }
+
+        /* Highlight opacity on hover */
+        .project-card:hover {
+            opacity: 1;
         }
     </style>
-
 
 
 
@@ -447,85 +588,70 @@
     <!-- Technology Stack Section -->
     <section id="tech-stack" class="py-16 px-6 bg-gray-800 relative">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-white mb-6">Technology Stack</h2>
-            <p class="max-w-2xl mx-auto text-gray-300 mb-8">These are the technologies I specialize in and use for
-                development.</p>
+            <h2 class="text-5xl font-semibold text-white mb-6">Technology Stack</h2>
+            <p class="max-w-3xl mx-auto text-gray-400 mb-8 text-lg">These are the technologies I specialize in and use
+                for development. My focus is on modern, efficient, and scalable tools.</p>
 
             <!-- Technology Stack Grid -->
-            <div class="flex justify-center gap-8 flex-wrap">
+            <div class="flex justify-center gap-12 flex-wrap">
                 <!-- Technology Icons (with hover scale effect) -->
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/azure.png" alt="Azure" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/azure.png" alt="Azure" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/python.png" alt="Python" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/python.png" alt="Python" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/power bi.png" alt="Power BI" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/power bi.png" alt="Power BI" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/r.png" alt="R Programming" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/r.png" alt="R Programming" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/excell.png" alt="Excell" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/excell.png" alt="Excell" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/sql.png" alt="SQL" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/sql.png" alt="SQL" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/sklearn.png" alt="Sklearn" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/sklearn.png" alt="Sklearn" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/jupyter.png" alt="Jupyter" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/jupyter.png" alt="Jupyter" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/pandas-logo.png" alt="Pandas" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/pandas-logo.png" alt="Pandas" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/numpy.png" alt="Numpy" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/numpy.png" alt="Numpy" class="w-20 h-20" loading="lazy">
                 </div>
 
-                <div class="tech-icon transition-transform transform hover:scale-110">
-                    <img src="photos/fabric.png" alt="Fabric" class="w-24 h-24">
+                <div
+                    class="tech-icon transition-transform transform hover:scale-105 hover:shadow-lg rounded-lg bg-white p-6 hover:bg-gray-50">
+                    <img src="photos/fabric.png" alt="Fabric" class="w-20 h-20" loading="lazy">
                 </div>
             </div>
         </div>
-
-        <!-- Mouse movement effect -->
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="tech-effect"></div>
-        </div>
     </section>
-
-    <!-- JavaScript for Mouse Movement Effect -->
-    <script>
-        const techIcons = document.querySelectorAll('.tech-icon');
-        const techEffect = document.querySelector('.tech-effect');
-
-        window.addEventListener('mousemove', (e) => {
-            techEffect.style.transform = `translate(-${e.clientX / 50}px, -${e.clientY / 50}px)`;
-        });
-
-        techIcons.forEach(icon => {
-            icon.addEventListener('mouseover', () => {
-                techEffect.style.transition = 'transform 0.5s ease-out';
-            });
-
-            icon.addEventListener('mouseout', () => {
-                techEffect.style.transition = 'transform 0.2s ease-in';
-            });
-        });
-    </script>
-
 
     <!-- Contact Me Section -->
     <section id="contact" class="py-16 px-6">

@@ -323,9 +323,192 @@
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 bg-gray-900">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-semibold mb-6 text-white opacity-0 translate-y-10 transition-all duration-700"
+                id="projects-heading">
+                Projects
+            </h2>
+            <p class="text-gray-300 mt-4 mb-8">I love working on projects that push the boundaries of technology.
+                Collaborating with diverse teams and exploring innovative solutions fuels my passion. Every project is a
+                new opportunity to learn, grow, and solve real-world problems together.</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8" id="projects-grid">
+                <!-- Project 1: Housing Price Prediction -->
+                <div class="project-card bg-gray-800 text-white border-2 border-gray-700 rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
+                    id="project1">
+                    <img src="photos/housing.jpg" alt="Housing Price Prediction"
+                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
+                    <h3 class="text-xl font-semibold">California Housing Price Prediction</h3>
+                    <p class="text-gray-300 mt-2">Developed a machine learning model for California housing price
+                        prediction using Linear Regression, Gradient Boosting, and XGBoost. Conducted data
+                        preprocessing, feature engineering, and model evaluation.</p>
+                    <a href="https://github.com/yourusername/housing-price-prediction" target="_blank"
+                        class="click-here text-white text-lg flex items-center justify-center mt-4 rounded-full py-2 px-4 bg-gray-700 hover:bg-pink-500 hover:text-white transition duration-300">
+                        <i
+                            class="fab fa-github text-white text-xl mr-2 hover:text-gray-900 transition-colors duration-300"></i>Working
+                        on!
+                    </a>
+                </div>
+
+                <!-- Project 2: Crude Oil Price Forecasting -->
+
+                <div class="project-card bg-gray-800 text-white border-2 border-gray-700 rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
+                    id="project2">
+                    <img src="photos/insuarance.jpg" alt="Crude Oil Price Forecasting"
+                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
+                    <h3 class="text-xl font-semibold">Health Care Premium Prediction</h3>
+                    <p class="text-gray-300 mt-2">Developed a Health Insurance Premium Prediction model using machine
+                        learning to improve pricing accuracy and fairness. Key steps included data preprocessing,
+                        handling multicollinearity, and creating a risk score feature. Models like Linear Regression,
+                        Ridge Regression, and XGBoost were trained, with XGBoost achieving 97.82% accuracy. Error
+                        analysis revealed age-related prediction issues, prompting a segmented modeling approach. For
+                        users over 25, XGBoost reached 99% accuracy with minimal error. For those under 25, adding a
+                        Genetical Risk feature reduced extreme errors from 73% to 2%, making Linear Regression the best
+                        fit. The final solution was deployed via a Streamlit web app for real-time predictions.</p>
+
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="https://github.com/VirajBuwaneka/insuarance-premium-prediction.git" target="_blank"
+                            class="text-white text-lg flex items-center justify-center rounded-full py-2 px-4 bg-gray-700 hover:bg-green-600 transition duration-300">
+                            <i class="fab fa-github text-xl mr-2"></i> GitHub
+                        </a>
+
+                        <a href="https://insuarance-premium-prediction-vb.streamlit.app/" target="_blank"
+                            class="text-white text-lg flex items-center justify-center rounded-full py-2 px-4 bg-blue-600 hover:bg-blue-700 transition duration-300">
+                            <i class="fas fa-external-link-alt text-xl mr-2"></i> Streamlit App
+                        </a>
+                    </div>
+                </div>
 
 
-    <!-- Articles Section -->
+                <!-- Project 3: Sentiment Analysis on Financial News -->
+                <div class="project-card bg-gray-800 text-white border-2 border-gray-700 rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
+                    id="project3">
+                    <img src="photos/Sentiment-Analysis.png" alt="Sentiment Analysis on Financial News"
+                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
+                    <h3 class="text-xl font-semibold">Sentiment Analysis Project</h3>
+                    <p class="text-gray-300 mt-2">Developed a sentiment analysis solution using machine learning,
+                        including data preprocessing, tokenization, and text normalization. Applied techniques like
+                        vocabulary building and vectorization. Trained and evaluated models such as Logistic Regression,
+                        Naive Bayes, and SVM. Built an end-to-end pipeline for automated sentiment prediction,
+                        showcasing expertise in machine learning and model evaluation.</p>
+                    <a href="https://github.com/VirajBuwaneka/Sentiment_analysis_project.git" target="_blank"
+                        class="click-here text-white text-lg flex items-center justify-center mt-4 rounded-full py-2 px-4 bg-gray-700 hover:bg-green-500 hover:text-white transition duration-300">
+                        <i
+                            class="fab fa-github text-white text-xl mr-2 hover:text-gray-900 transition-colors duration-300"></i>View
+                        on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript for Scroll Animation and Lazy Loading -->
+    <script>
+        const revealOnScroll = () => {
+            document.querySelectorAll('.opacity-0').forEach(element => {
+                if (element.getBoundingClientRect().top < window.innerHeight - 100) {
+                    element.classList.remove('opacity-0', 'translate-y-10');
+                    element.classList.add('opacity-100', 'translate-y-0');
+                }
+            });
+
+            // Lazy load images
+            document.querySelectorAll('img.lazy-load').forEach(img => {
+                if (img.getBoundingClientRect().top < window.innerHeight && !img.classList.contains('loaded')) {
+                    img.classList.add('loaded');
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+
+    <!-- Tailwind Custom Styles -->
+    <style>
+        .opacity-100 {
+            opacity: 1 !important;
+        }
+
+        /* Lazy Load Fade-in */
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+
+        /* Hover effect for the 'Click Here to GitHub' link */
+        .click-here:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .click-here {
+            padding: 8px 16px;
+            border-radius: 50px;
+            /* Rounded button */
+        }
+
+        /* GitHub icon hover effect */
+        .fab:hover {
+            transform: scale(1.1);
+            /* Slight scaling effect on hover */
+        }
+
+        /* Project cards styling */
+        .project-card {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        /* Adjust opacity for non-hover state */
+        .project-card:not(:hover) {
+            opacity: 0.9;
+        }
+
+        /* Highlight opacity on hover */
+        .project-card:hover {
+            opacity: 1;
+        }
+
+        /* Beautiful Hover Effect for GitHub Button */
+        .click-here {
+            background-color: #4a5568;
+            /* Default background */
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .click-here:hover {
+            background-color: #d53f8c;
+            /* Pink color on hover */
+            color: white;
+            transform: scale(1.05);
+            /* Slight scaling effect */
+        }
+
+        /* Adding animation effect on hover */
+        .click-here:hover i {
+            transform: scale(1.2);
+            /* Scale up the icon */
+            color: #1a202c;
+            /* Darken the icon color */
+        }
+    </style>
+
     <!-- Articles Section -->
     <section id="articles" class="py-16 px-6 bg-white">
         <div class="container mx-auto text-center">
@@ -471,180 +654,6 @@
         </div>
     </section>
 
-
-
-    <!-- Projects Section -->
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-6 bg-gray-900">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-semibold mb-6 text-white opacity-0 translate-y-10 transition-all duration-700"
-                id="projects-heading">
-                Projects
-            </h2>
-            <p class="text-gray-300 mt-4 mb-8">I love working on projects that push the boundaries of technology.
-                Collaborating with diverse teams and exploring innovative solutions fuels my passion. Every project is a
-                new opportunity to learn, grow, and solve real-world problems together.</p>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8" id="projects-grid">
-                <!-- Project 1: Housing Price Prediction -->
-                <div class="project-card bg-gray-800 text-white border-2 border-gray-700 rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
-                    id="project1">
-                    <img src="photos/housing.jpg" alt="Housing Price Prediction"
-                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
-                    <h3 class="text-xl font-semibold">California Housing Price Prediction</h3>
-                    <p class="text-gray-300 mt-2">Developed a machine learning model for California housing price
-                        prediction using Linear Regression, Gradient Boosting, and XGBoost. Conducted data
-                        preprocessing, feature engineering, and model evaluation.</p>
-                    <a href="https://github.com/yourusername/housing-price-prediction" target="_blank"
-                        class="click-here text-white text-lg flex items-center justify-center mt-4 rounded-full py-2 px-4 bg-gray-700 hover:bg-pink-500 hover:text-white transition duration-300">
-                        <i
-                            class="fab fa-github text-white text-xl mr-2 hover:text-gray-900 transition-colors duration-300"></i>Working
-                        on!
-                    </a>
-                </div>
-
-                <!-- Project 2: Crude Oil Price Forecasting -->
-                <div class="project-card bg-gray-800 text-white border-2 border-gray-700 rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
-                    id="project2">
-                    <img src="photos/oil.jpg" alt="Crude Oil Price Forecasting"
-                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
-                    <h3 class="text-xl font-semibold">Crude Oil Price Forecasting</h3>
-                    <p class="text-gray-300 mt-2">ARIMA model for forecasting crude oil prices using historical Yahoo
-                        Finance data.</p>
-                    <a href="https://github.com/yourusername/crude-oil-price-forecasting" target="_blank"
-                        class="click-here text-white text-lg flex items-center justify-center mt-4 rounded-full py-2 px-4 bg-gray-700 hover:bg-blue-500 hover:text-white transition duration-300">
-                        <i
-                            class="fab fa-github text-white text-xl mr-2 hover:text-gray-900 transition-colors duration-300"></i>Working
-                        on!
-                    </a>
-                </div>
-
-                <!-- Project 3: Sentiment Analysis on Financial News -->
-                <div class="project-card bg-gray-800 text-white border-2 border-gray-700 rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
-                    id="project3">
-                    <img src="photos/Sentiment-Analysis.png" alt="Sentiment Analysis on Financial News"
-                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
-                    <h3 class="text-xl font-semibold">Sentiment Analysis Project</h3>
-                    <p class="text-gray-300 mt-2">Developed a sentiment analysis solution using machine learning,
-                        including data preprocessing, tokenization, and text normalization. Applied techniques like
-                        vocabulary building and vectorization. Trained and evaluated models such as Logistic Regression,
-                        Naive Bayes, and SVM. Built an end-to-end pipeline for automated sentiment prediction,
-                        showcasing expertise in machine learning and model evaluation.</p>
-                    <a href="https://github.com/VirajBuwaneka/Sentiment_analysis_project.git" target="_blank"
-                        class="click-here text-white text-lg flex items-center justify-center mt-4 rounded-full py-2 px-4 bg-gray-700 hover:bg-green-500 hover:text-white transition duration-300">
-                        <i
-                            class="fab fa-github text-white text-xl mr-2 hover:text-gray-900 transition-colors duration-300"></i>View
-                        on GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- JavaScript for Scroll Animation and Lazy Loading -->
-    <script>
-        const revealOnScroll = () => {
-            document.querySelectorAll('.opacity-0').forEach(element => {
-                if (element.getBoundingClientRect().top < window.innerHeight - 100) {
-                    element.classList.remove('opacity-0', 'translate-y-10');
-                    element.classList.add('opacity-100', 'translate-y-0');
-                }
-            });
-
-            // Lazy load images
-            document.querySelectorAll('img.lazy-load').forEach(img => {
-                if (img.getBoundingClientRect().top < window.innerHeight && !img.classList.contains('loaded')) {
-                    img.classList.add('loaded');
-                    img.classList.remove('opacity-0');
-                    img.classList.add('opacity-100');
-                }
-            });
-        };
-
-        window.addEventListener('scroll', revealOnScroll);
-        document.addEventListener('DOMContentLoaded', revealOnScroll);
-    </script>
-
-    <!-- Tailwind Custom Styles -->
-    <style>
-        .opacity-100 {
-            opacity: 1 !important;
-        }
-
-        /* Lazy Load Fade-in */
-        .lazy-load {
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .lazy-load.loaded {
-            opacity: 1;
-        }
-
-        /* Hover effect for the 'Click Here to GitHub' link */
-        .click-here:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            color: white;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .click-here {
-            padding: 8px 16px;
-            border-radius: 50px;
-            /* Rounded button */
-        }
-
-        /* GitHub icon hover effect */
-        .fab:hover {
-            transform: scale(1.1);
-            /* Slight scaling effect on hover */
-        }
-
-        /* Project cards styling */
-        .project-card {
-            transition: all 0.3s ease-in-out;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
-            transform: scale(1.05);
-            z-index: 10;
-        }
-
-        /* Adjust opacity for non-hover state */
-        .project-card:not(:hover) {
-            opacity: 0.9;
-        }
-
-        /* Highlight opacity on hover */
-        .project-card:hover {
-            opacity: 1;
-        }
-
-        /* Beautiful Hover Effect for GitHub Button */
-        .click-here {
-            background-color: #4a5568;
-            /* Default background */
-            color: white;
-            transition: all 0.3s ease;
-        }
-
-        .click-here:hover {
-            background-color: #d53f8c;
-            /* Pink color on hover */
-            color: white;
-            transform: scale(1.05);
-            /* Slight scaling effect */
-        }
-
-        /* Adding animation effect on hover */
-        .click-here:hover i {
-            transform: scale(1.2);
-            /* Scale up the icon */
-            color: #1a202c;
-            /* Darken the icon color */
-        }
-    </style>
 
 
 

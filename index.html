@@ -381,6 +381,46 @@
                 </div>
 
 
+                <!-- Project 3: Credit risk modeling -->
+
+                <div class="project-card bg-gray-800 text-white border-2 border-gray-700 rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
+                    id="project2">
+                    <img src="photos//credit.jpg" alt="Credit risk modeling"
+                        class="w-full h-40 object-cover rounded-md mb-4 lazy-load opacity-0">
+                    <h3 class="text-xl font-semibold">Credit Risk Modeling</h3>
+                    <p class="text-gray-300 mt-2">This project focuses on developing a machine learning-based credit
+                        scoring model for Non-Banking Financial Companies (NBFCs), which provide financial services like
+                        personal, vehicle, and business loans without a banking license. The loan approval process
+                        involves KYC verification, credit bureau checks, and evaluation of both customer and loan data.
+                        Key data features include personal (e.g., age, income), bureau (e.g., delinquency, credit
+                        utilization), and loan details (e.g., loan amount, purpose). All data sources were merged using
+                        customer ID to form a single dataset, followed by a train-test split to prevent data leakage.
+                        Exploratory Data Analysis (EDA), feature engineering (like loan-to-income and delinquent
+                        ratios), and feature selection techniques such as VIF for numeric and WoE/IV for categorical
+                        data were applied. Several model training attempts were made: initial models (Logistic
+                        Regression, Random Forest, XGBoost) performed well but struggled with class imbalance.
+                        Subsequent approaches addressed this using undersampling and SMOTE-Tomek techniques. Logistic
+                        Regression and XGBoost were further tuned using RandomizedSearchCV and Optuna, respectively. The
+                        best results were obtained using Logistic Regression with SMOTE-Tomek and Optuna tuning,
+                        achieving high recall (0.94) and balanced F1-score (0.70) for the minority class, indicating
+                        effective credit risk prediction.</p>
+
+                    <div class="flex justify-center space-x-4 mt-4">
+                        <a href="https://github.com/VirajBuwaneka/credit-risk-modeling-project" target="_blank"
+                            class="text-white text-lg flex items-center justify-center rounded-full py-2 px-4 bg-gray-700 hover:bg-green-600 transition duration-300">
+                            <i class="fab fa-github text-xl mr-2"></i> GitHub
+                        </a>
+
+                        <a href="https://credit-risk-modeling-project-ds6bvqe8uwbgfmgkadbmgu.streamlit.app//"
+                            target="_blank"
+                            class="text-white text-lg flex items-center justify-center rounded-full py-2 px-4 bg-blue-600 hover:bg-blue-700 transition duration-300">
+                            <i class="fas fa-external-link-alt text-xl mr-2"></i> Streamlit App
+                        </a>
+                    </div>
+                </div>
+
+
+
                 <!-- Project 3: Sentiment Analysis on Financial News -->
                 <div class="project-card bg-gray-800 text-white border-2 border-gray-700 rounded-lg shadow-xl p-6 transition-all hover:scale-105 hover:shadow-2xl duration-300 opacity-90 hover:opacity-100 opacity-0 translate-y-10 transition-all duration-700"
                     id="project3">
